@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XML Introduction</title>
+</head>
+<body>
+
+  <p id="xml-here"></p>
+
+  <script>
+    let xmlParser, xmlDoc;
+
+    let myCar = '<car>' +
+    '<make>Nissan</make>' +
+    '<model>Altima</model>' +
+    '<year>2017</year>' +
+    '<color>Metallic Blue</color>' +
+    '</car>';
+
+    xmlParser = new DOMParser();
+    xmlDoc = xmlParser.parseFromString(myCar, 'text/xml');
+
+    document.getElementById('xml-here').innerHTML = xmlDoc.getElementsByTagName('model')[0].childNodes[0].nodeValue;
+
+  </script>
+  
+</body>
+</html>

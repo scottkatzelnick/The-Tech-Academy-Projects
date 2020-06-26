@@ -1,0 +1,8 @@
+# This file enables the interpretor to run
+
+getToken.Configure.Run: {
+  "My Website": {
+    "integrated.terminal": "iterm.app",
+    "generalPath.Interpretor": "/usr/bin"
+  }
+}

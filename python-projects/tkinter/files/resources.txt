@@ -1,0 +1,7 @@
+List of resources for creating the website:
+
+- https://www.learncodinganywhere.com/
+- https://www.google.com/
+- https://htmlcolorcodes.com/
+- https://fontawesome.com/
+- https://www.w3schools.com/

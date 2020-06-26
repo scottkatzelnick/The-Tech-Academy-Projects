@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Scott Katzelnick">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/basic_css_1.css">
+    <title>Timer App & Slideshow</title>
+</head>
+<body>
+    
+    <!-- Timer App -->
+    <h2>Timer App</h2>
+    <p>How many seconds would you like to set your alarm for?</p>
+    <input type="number" id="seconds" value="" placeholder="30">
+    <button onclick="Countdown()">Set Timer</button>
+    <p id="timer"></p>
+
+    <br><br><br>
+
+    <!-- Slideshow -->
+
+    <!-- Container -->
+    <div class="slideshow-container">
+
+        <!-- Full-Width Img w/ Number & Caption Text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="./img/covid_mask.jpg" alt="A bronze statue wearing a mask" style="width: 100%;">
+            <div class="text">Even the cities' statues aren't taking any chances.</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="./img/covid_street.jpg" alt="An empty street with a lone bicycleist" style="width: 100%;">
+            <div class="text">The streets have been empty lately, and for good cause.</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="./img/covid_message.jpg" alt="A theatre using its marquee to urge hand washing" style="width: 100%;">
+            <div class="text">The local businesses are pitching in on the effort to get rid of COVID-19.</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="./img/covid_hashtag.jpg" alt="A piece of paper with the hashtag stay home laying in grass" style="width: 100%;">
+            <div class="text">Unfortunately, staying home right now is the best thing we can do to slow down the spread of the virus.</div>
+        </div>
+
+        <!-- Next/Previous Buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+    <br>
+
+    <!-- Dots -->
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script src="./js/basic_javascript_9.js"></script>
+
+</body>
+</html>

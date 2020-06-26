@@ -1,0 +1,34 @@
+/* Center The Header */
+#body #header h1 {
+  margin: auto;
+  text-align: center;
+}
+
+/* Container & Canvas Alignment */
+.center-container {
+  width: 608px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* Collapse Borders For The Table Element */
+table {
+  border-collapse: collapse;
+  border-style: hidden;
+}
+
+/* Formatting The Table Data Cell Elements */
+td {
+  cursor: pointer;
+  border: 4px solid rgba(136, 172, 244, 0.8);
+  padding: 0;
+  width: 200px;
+  height: 200px;
+}
+
+/* Formatting Canvas On Page */
+canvas {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+}

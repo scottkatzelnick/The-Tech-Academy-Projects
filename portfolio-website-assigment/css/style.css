@@ -1,0 +1,563 @@
+/*=============================================
+=            Utility            =
+=============================================*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*=====  End of Utility  ======*/
+
+/*=============================================
+=            Body            =
+=============================================*/
+body {
+  margin: 0%;
+  opacity: 1;
+  transition: 3s opacity;
+  letter-spacing: .2vw;
+  font-family: Avant Garde, Helvetica;
+  font-size: 1.2vw;
+}
+
+/*----------  Page load effect  ----------*/
+body.fade-out {
+  opacity: .1;
+  transition: none;
+}
+
+/*=====  End of Body  ======*/
+
+/*=============================================
+=            Navbar            =
+=============================================*/
+.navbar {
+  overflow: hidden;
+  background: rgba(0, 0, 0, .4);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  -webkit-animation: moveNav 5s;
+  animation: moveNav 5s;
+}
+
+/*----------  Navbar text  ----------*/
+.navbar a {
+  float: left;
+  display: block;
+  color: #fff;
+  padding: .75vw 1vw;
+  text-decoration: none;
+  font-family: Avant Garde, Helvetica;
+  font-size: 1.2vw;
+  text-align: center;
+  position: relative;
+  letter-spacing: .2vw;
+  -webkit-animation: movenavText 5.75s;
+  animation: movenavText 5.75s;
+}
+
+/*----------  Navbar animation  ----------*/
+@keyframes moveNav {
+  from {
+    left: -100vw;
+  }
+  to {
+    left: 0vw;
+  }
+}
+
+/*----------  Navbar text animation  ----------*/
+@keyframes movenavText {
+  from {
+    top: -100vw;
+  }
+  to {
+    top: 0vw;
+  }
+}
+
+/*----------  Navbar hover effect  ----------*/
+.navbar a:hover {
+  background-color: #f1f1f1;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-animation-duration: 1s;
+  transition-duration: .75s;
+}
+
+/*----------  Navbar home button effect  ----------*/
+.navbar a.active {
+  background-color: darkgray;
+}
+
+/*=====  End of Navbar  ======*/
+
+/*=============================================
+=            Video            =
+=============================================*/
+#typing-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  top: 0;
+  z-index: -1;
+  animation: zoominoutsinglefeatured 5s;
+}
+
+/*----------  Video zoom animation  ----------*/
+@keyframes zoominoutsinglefeatured {
+  0% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/*----------  Video text  ----------*/
+.video_text {
+  background: rgba(0, 0, 0, .4);
+  color: #fff;
+  width: 100%;
+  padding-top: .1vh;
+  padding-bottom: 1vh;
+  margin-top: 23%;
+  position: relative;
+  -webkit-animation: moveNav 4s;
+  animation: movevideoText 4s;
+}
+
+/*----------  Video text animation  ----------*/
+@keyframes movevideoText {
+  from {
+    top: -100vw;
+  }
+  to {
+    top: 0vw;
+  }
+}
+
+/*=====  End of Video  ======*/
+
+/*=============================================
+=            Slideshow            =
+=============================================*/
+#slideshow-background {
+  background: rgb(255, 255, 255, 0.35);
+}
+
+.mySlides {
+  display: none;
+}
+
+/*----------  Slideshow container  ----------*/
+#slideshow-container {
+  width: 40vw;
+  height: auto;
+  padding-top: 4%;
+  position: relative;
+  margin: auto;
+}
+
+/*----------  Slideshow images  ----------*/
+.slideshow-img {
+  vertical-align: middle;
+  height: auto;
+  box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .35);
+  width: 100%;
+}
+
+/*----------  Slideshow previous/next arrows  ----------*/
+.previous,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 2vw;
+  margin-top: -0vw;
+  color: darkgray;
+  font-weight: bold;
+  font-size: 1.2vw;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.previous {
+  color: darkgray;
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.previous:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+/*----------  Slideshow text  ----------*/
+.text {
+  color: #fff;
+  padding: 1vw;
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: Perpetua, Rockwell Extra Bold;
+  letter-spacing: .1vw;
+  font-size: 1.2vw;
+  background-color: rgba(0, 0, 0, .75);
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+}
+
+/*----------  Slideshow numbers  ----------*/
+.slide-number {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  font-family: Perpetua, Rockwell Extra Bold;
+  letter-spacing: .1vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+  display: none;
+}
+
+/*----------  Slideshow dots  ----------*/
+.dot {
+  cursor: pointer;
+  height: 1vw;
+  width: 1vw;
+  margin: .25vw;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.active,
+.dot:hover {
+  background-color: #333;
+}
+
+/*----------  Slideshow fading animation  ----------*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*=====  End of Slideshow  ======*/
+
+/*=============================================
+=            Table for about section            =
+=============================================*/
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 1.6%;
+  background-color: #f2f2f2;
+  height: 550px;
+}
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 1.6%;
+  background-color: #4d4d4d;
+  height: 550px;
+}
+
+@media screen and (max-width: 600px) {
+  .column1 img,
+  .column2 img {
+    display: block;
+    min-width: 25%;
+    height: auto;
+  }
+}
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/*=====  End of Table for about section  ======*/
+
+/*=============================================
+=            About section text            =
+=============================================*/
+h1 {
+  text-transform: uppercase;
+  font-family: "Trebuchet MS", Optima;
+  text-align: center;
+  margin-top: 3%;
+  color: #1a1a1a;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: "Trebuchet MS", Optima;
+  text-align: center;
+  margin-top: 3%;
+  color: #1a1a1a;
+}
+
+p {
+  font-family: Perpetua, Rockwell Extra Bold;
+  text-align: justify;
+  letter-spacing: .1vw;
+  font-size: 1.2vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+#github p {
+  font-family: Perpetua, Rockwell Extra Bold;
+  text-align: center;
+  letter-spacing: .1vw;
+  font-size: 1.2vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+center {
+  font-family: Perpetua, Rockwell Extra Bold;
+  text-align: center;
+  letter-spacing: .1vw;
+  font-size: 1.2vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+a {
+  color: blue;
+}
+
+q {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*=====  End of About section text  ======*/
+
+/*=============================================
+=            About section images            =
+=============================================*/
+#about img {
+  filter: grayscale(75%);
+  display: block;
+  border-radius: 8px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  position: relative;
+}
+
+#github img {
+  filter: grayscale(75%);
+  display: block;
+  border-radius: 8px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  position: relative;
+}
+
+/*=====  End of About section images  ======*/
+
+/*=============================================
+=            General text styling            =
+=============================================*/
+center:hover {
+  transition: transform 1.5s;
+  transform: scale(1.05);
+}
+
+p:hover {
+  color: #00004d;
+  transition: transform .5s;
+  transform: scale(1.01);
+}
+
+h2:hover {
+  transition: transform .5s;
+  transform: scale(1.1);
+}
+
+img:hover {
+  filter: grayscale(0%);
+  transition: transform .5s;
+  transform: scale(1.05);
+}
+
+/*=====  End of General text styling  ======*/
+
+/*=============================================
+=            Contact Form            =
+=============================================*/
+@keyframes movePopUp {
+  from {
+    right: -14vw;
+  }
+  to {
+    bottom: 1.75vw;
+  }
+}
+
+.pop-up-button {
+  bottom: 1.75vw;
+  right: 1.75vw;
+  width: 25vw;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  cursor: pointer;
+  position: fixed;
+  -webkit-animation: movePopUp 5s;
+  animation: movePopUp 5s;
+}
+
+.form-popup {
+  border: 2px solid #777;
+  border-radius: 4px;
+  z-index: 8;
+  display: none;
+  position: fixed;
+  bottom: 6px;
+  right: 6px;
+}
+
+.form-container {
+  max-width: 49vw;
+  padding: 9px;
+  background-color: #777;
+}
+
+/*----------  Contact form input fields  ----------*/
+.form-container input[type=text],
+.form-container input[type=email],
+.form-container input[type=tel],
+.form-container input[type=password] {
+  width: 100%;
+  padding: .93vw;
+  margin: .6vw 0 .6vw 0;
+  border: 1px solid gainsboro;
+  border-radius: 4px;
+  background: gainsboro;
+  font-family: Helvetica, Avant Garde;
+  font-size: 1vw;
+}
+
+/*----------  Contact form buttons  ----------*/
+.form-container .btn {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  margin-bottom: 1vh;
+}
+
+.form-container .cancel {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+button {
+  font-family: "Trebuchet MS", Optima;
+  letter-spacing: .3vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+  padding: 1.5vw 1.5vw;
+  border-style: solid;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/*=====  End of Contact Form  ======*/
+
+/*=============================================
+=            General button effects            =
+=============================================*/
+button:hover {
+  color: #fff;
+  background-color: #333;
+  -webkit-transition-duration: .75s;
+  transition-duration: .75s;
+  border: 1px solid #fff;
+}
+
+.form-container .btn:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 255, .9);
+  -webkit-transition-duration: .75s;
+  transition-duration: .75s;
+  border: 1px solid #fff;
+}
+
+.form-container .cancel:hover {
+  color: #fff;
+  background-color: rgb(255, 80, 80, .8);
+  -webkit-transition-duration: .75s;
+  transition-duration: .75s;
+  border: 1px solid #fff;
+}
+
+.form-container .cancel:active {
+  background-color: rgb(255, 80, 80, .8);
+  border: 1px solid #fff;
+}
+
+/*=====  End of General button effects  ======*/
+
+/*=============================================
+=            Footer            =
+=============================================*/
+footer {
+  padding: 2%;
+  background-color: #fff;
+}
+
+/*=====  End of Footer  ======*/

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Build the best gaming computer">
+  <meta name="keywords" content="gaming, rig, computer, desktop, powerful, Nvidia, AMD, Intel, graphics card, processor, memory, RAM, SSD">
+  <meta name="author" content="Scott Katzelnick">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/single_page_website.css">
+  <title>Build Your Rig &nbsp;|&nbsp; Gaming</title>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <div id="nav">
+    <nav>
+      <a href="#intro">Intro</a>&nbsp;&nbsp;
+      <a href="#parts">The Parts</a>&nbsp;&nbsp;
+      <a href="#video">The Process</a>&nbsp;&nbsp;
+      <a href="#form">Updates</a>&nbsp;&nbsp;
+      <a href="#contact">Contact</a>&nbsp;&nbsp;
+    </nav>
+  </div>
+
+  <!-- Introduction -->
+  <div id="intro">
+    <header>
+      <h1><u>What You Need To Build Your Gaming Rig</u></h1>
+        <h3>Imagine if money were no object- What type of gaming computer would you build? </h3>
+          <p>Well, that's exactly what we asked ourselves, and the solution is crazy. Wanna run Crisis&trade;? <b>Piece of cake!</b> How about Lara Croft: Rise Of The Tomb Raider&trade; at ultra settings? <b>No issues!</b> Even Deus Ex: Mankind Divided&trade; on full blast?! <b>Yep!</b> So hold on tight, it's gunna be a <b>fun</b> and <em>expensive</em> ride!</p>
+          <img src="./img/gamer_setup.png" alt="A computer desk with a monitor, keyboard, speakers, gaming headset and mouse next to a very powerful gaming desktop computer">
+    </header>
+  </div>
+
+      <br><br>
+
+  <!-- Parts List Images For Lightbox -->
+  <h3 id="parts"><u>The Parts:</u></h3>
+  <div class="row">
+    <div class="column">
+      <img class="hover-shadow cursor" src="./img/thumb/cougar_case_thumb.jpeg" onclick="openModal();currentSlide(1)">
+    </div>
+    <div class="column">
+      <img class="hover-shadow cursor" src="./img/thumb/motherboard_msi_thumb.jpeg" onclick="openModal();currentSlide(2)">
+    </div>
+    <div class="column">
+      <img class="hover-shadow cursor" src="./img/thumb/cpu_intel_thumb.jpeg" onclick="openModal();currentSlide(3)">
+    </div>
+    <div class="column">
+      <img class="hover-shadow cursor" src="./img/thumb/gpu_msi_thumb.jpeg" onclick="openModal();currentSlide(4)">
+    </div>
+    <div class="column">
+      <img class="hover-shadow cursor" src="./img/thumb/ram_gskill_thumb.jpeg" onclick="openModal();currentSlide(5)">
+    </div>
+    <div class="column">
+      <img class="hover-shadow cursor" src="./img/thumb/ssd_colorful_thumb.jpeg" onclick="openModal();currentSlide(6)">
+    </div>
+    <div class="column">
+      <img class="hover-shadow cursor" src="./img/thumb/psu_coolermaster_thumb.jpeg" onclick="openModal();currentSlide(7)" alt="PSU - Cooler Master V750-750W Compact Fully Modular 80 Plus Gold Power Supply">
+    </div>
+    <div class="column cooler">
+      <img class="hover-shadow cursor" src="./img/thumb/cooler_corsair_thumb.jpeg" onclick="openModal();currentSlide(8)" alt="Cooling - CORSAIR Hydro Series H100i v2 AIO Liquid CPU Cooler, 240mm Radiator, Dual 120mm PWM Fans, Advanced RGB Lighting and Fan Software Control">
+    </div>
+    
+  </div>
+
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 8</div>
+        <img src="./img/cougar_case.png" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 8</div>
+        <img src="./img/motherboard_msi.png" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 8</div>
+        <img src="./img/cpu_intel.png" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">4 / 8</div>
+        <img src="./img/gpu_msi.png" style="width:100%">
+      </div>
+      
+      <div class="mySlides">
+        <div class="numbertext">5 / 8</div>
+        <img src="./img/ram_gskill.png" style="width:100%">
+      </div>
+      
+      <div class="mySlides">
+        <div class="numbertext">6 / 8</div>
+        <img src="./img/ssd_colorful.png" style="width:100%">
+      </div>
+      
+      <div class="mySlides">
+        <div class="numbertext">7 / 8</div>
+        <img src="./img/psu_coolermaster.png" style="width:100%">
+      </div>
+      
+      <div class="mySlides">
+        <div class="numbertext">8 / 8</div>
+        <img src="./img/cooler_corsair.png" style="width:100%">
+      </div>
+  
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+      <!-- Thumbnail image controls -->
+      <div class="column">
+        <img class="demo" src="./img/thumb/cougar_case_thumb.jpeg" onclick="currentSlide(1)" alt="The Case - Cougar CONQUER ATX Gaming Case - / Mini ITX / Micro ATX PC Case / ATX Computer Case- Mid Tower w/ Tempered Glass">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="./img/thumb/motherboard_msi_thumb.jpeg" onclick="currentSlide(2)" alt="The Motherboard - MSI MEG Z390 GODLIKE LGA1151">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="./img/thumb/cpu_intel_thumb.jpeg" onclick="currentSlide(3)" alt="CPU - Intel Core i9-9900K Desktop Processor 8 Cores up to 5.0 GHz Turbo unlocked LGA1151 300 Series 95W">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="./img/thumb/gpu_msi_thumb.jpeg" onclick="currentSlide(4)" alt="GPU - MSI Gaming GeForce RTX 2080 8GB GDRR6 256-bit VR Ready Graphics Card">
+      </div>
+      
+      <div class="column">
+        <img class="demo" src="./img/thumb/ram_gskill_thumb.jpeg" onclick="currentSlide(5)" alt="RAM - G.SKILL TridentZ RGB Series 32GB (4 x 8GB) 288-Pin DDR4 SDRAM DDR4 3200 (PC4 25600) Desktop Memory">
+      </div>
+      
+      <div class="column">
+        <img class="demo" src="./img/thumb/ssd_colorful_thumb.jpeg" onclick="currentSlide(6)" alt="SSD - Colorful SSD 1TB - 2.5">
+      </div>
+      
+      <div class="column">
+        <img class="demo" src="./img/thumb/psu_coolermaster_thumb.jpeg" onclick="currentSlide(7)" alt="PSU - Cooler Master V750-750W Compact Fully Modular 80 Plus Gold Power Supply">
+      </div>
+      
+      <div class="column">
+        <img class="demo" src="./img/thumb/cooler_corsair_thumb.jpeg" onclick="currentSlide(8)" alt="Cooling - CORSAIR Hydro Series H100i v2 AIO Liquid CPU Cooler, 240mm Radiator, Dual 120mm PWM Fans, Advanced RGB Lighting and Fan Software Control">
+      </div>
+
+    </div>
+  </div>
+  
+
+        <br><br>
+
+  <!-- Video Showing Build Process -->
+  <div id="video">
+    <h3>The Process:</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qXUJSCZiU48" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+        <br><br><br><br>
+
+  <!-- Contact Info Form -->
+  <div>
+    <h3 class="form-heading">Send us your info for future updates!</h3>
+  </div>
+  
+  <div>
+    <form action="#" id="form">
+      <fieldset>
+        <legend>Basic Contact Info:</legend>
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName" placeholder="John" required autofocus><br>
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" placeholder="Doe" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" placeholder="john@doe.com" required><br>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" placeholder="(123)456-7890" required><br><br>
+        <label for="preference">Preferred contact method: </label>
+        <select name="preference" id="contact">
+          <option value="email">Email</option>
+          <option value="phone">Phone</option>
+        </select><br><br>
+        <input type="submit">
+        <input type="reset">
+      </fieldset>
+    </form>
+  </div>
+
+        <br><br>
+
+  <!-- Footer w/ My Contact Info -->
+  <div>
+    <footer id="contact">
+      <details>
+        <summary>Contact & Info</summary>
+        <p>Built by Scott Katzelnick &copy; 2020-2021</p>
+        <p>Video courtesy of Linus Tech Tips&trade;</p>
+        <p>Photos courtesy of PC Builders Inc.&trade;</p>
+        <p>Contact Info - <b>Phone: 732.900.1932</b>&nbsp;&nbsp;<b>Email: <a href="mailto:scottkatzelnick@mac.com">scottkatzelnick@mac.com</b></a></p>
+      </details>
+    </footer>
+  </div>
+
+        <br><br>
+
+  <!-- Top Of Page Navigation Element -->
+  <div>
+    <nav>
+      <a class="top" href="#nav">top</a>
+    </nav>
+  </div>
+
+  <script src="./js/single_page_website.js"></script>
+
+</body>
+</html>

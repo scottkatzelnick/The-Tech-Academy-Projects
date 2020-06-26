@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/css_1.css">
+    <title>Form Validation</title>
+  </head>
+  <body>
+
+    <!-- Main Heading -->
+    <h1>Form Validation Assignment</h1>
+
+    <!-- Form Within Container -->
+      <div id="form-background">
+        <div id="form-container">
+          <form action="" id="myForm" name="myForm" onsubmit="return validateForm()">
+            <h3>Please Fill Out This Form</h3>
+            <label for="fname"><span style="color: red;">*</span> First Name</label><br>
+            <input id="fname" type="text" name="fname" size="35" placeholder="John" autofocus><br>
+            <label for="lname"><span style="color: red;">*</span> Last Name</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Doe" size="35"><br>
+            <label for="email"><span style="color: red;">*</span> Email</label><br>
+            <input type="email" id="email" name="email" placeholder="email@example.com" size="35"><br>
+            <label for="phone"><span style="color: red;">*</span> Phone Number</label><br>
+            <input type="tel" name="phone" id="phone" min="10" placeholder="1234567890" pattern="^\+?[0-9]{3}-?[0-9]{7}$" size="35"><br><br>
+            <input type="submit" name="submit-button" id="submit" class="button">
+            <input type="reset" class="button"><br>
+            <p><span style="color: red; vertical-align: sub;">*</span> required</p>
+          </form>
+        </div>
+      </div>
+    
+    <!-- Javascript File -->
+    <script src="./js/javascript_2.js"></script>
+    
+  </body>
+  </html>

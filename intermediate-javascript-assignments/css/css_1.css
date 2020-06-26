@@ -1,0 +1,62 @@
+/* General Background, Font & Sizing */
+body {
+  background-color: rgb(31, 58, 117);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 1000px;
+}
+
+/* Heading */
+body h1 {
+  color: #fff;
+  text-align: center;
+  padding-top: 60px;
+}
+
+/* Form Container */
+#form-container {
+  display: block;
+  text-align: center;
+  height: 400px;
+  width: 400px;
+  background-color: rgb(177, 177, 177);
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 75px;
+}
+
+/* Form Formatting */
+#myForm {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+#form-container h3 {
+  text-align: center;
+}
+
+#form-container label {
+  font-size: .85rem;
+}
+
+#form-container input {
+  margin-bottom: 16px;
+}
+
+#form-container #phone {
+  margin-bottom: 0px;
+}
+
+#form-container .button {
+  margin-top: 0px;
+}
+
+#form-container p {
+  font-size: .75rem;
+  margin-top: 0;
+}
