@@ -33,10 +33,9 @@
 import os
 import time
 import shutil
-from file_transfer_assignment import file_xfer_part3
 
 # Indicate source and destination directories and initialize them into variables
-source = file_xfer_part3.relay_source()
+source = '/Users/Scott/Documents/the-tech-academy/python-projects/tkinter/daily/'
 destination = "/Users/Scott/Documents/Projects/The Tech Academy/python projects/learn_python/Archive/"
 
 

@@ -22,12 +22,11 @@ import shutil
 import os
 
 # Set file path for source
-source = "/Users/Scott/Desktop/A/"
+source = "/Users/Scott/Documents/the-tech-academy/python-projects/basic-python/a"
 
 # Set the destination path & create list of all files in source to be moved to destination
-destination = "/Users/Scott/Desktop/B/"
+destination = "/Users/Scott/Documents/the-tech-academy/python-projects/basic-python/b"
 files = os.listdir(source)
-
-# Move .txt files to destination
 for i in files:
-    shutil.move(source + i, destination)
+    fpath = str(source + '/')
+    shutil.move(fpath + i, destination)
