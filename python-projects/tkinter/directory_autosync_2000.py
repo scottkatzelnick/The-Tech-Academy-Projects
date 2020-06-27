@@ -20,6 +20,11 @@
 # Allow the user to manually initiate the 'file check' process that is performed by the script.
 #
 # You have been asked to create this UI.
+#
+#   **********************************************************************************************
+# **WHEN RUNNING THE PROGRAM I SETUP TWO FOLDERS, a AND b. MAKE a THE SOURCE and b THE DESTINATION**
+#   **********************************************************************************************
+# - These folders already have content with variable creation and modified dates to test the script.
 
 # Imported modules
 import tkinter as tk
