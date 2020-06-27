@@ -130,11 +130,13 @@ class ParentWindow(Frame):
                         if file_exists.exists():
                             shutil.copy(paths, destination)
                             os.remove(i)
-                            print("{} was moved from\n{} to\n{} ".format(i, source, destination))
+                            # print("{} was moved from\n{} to\n{} ".format(i, source, destination))
                         else:
                             shutil.move(paths, destination)
-                            print("{} was moved from\n{} to\n{} ".format(i, source, destination))
-            messagebox.askokcancel("Directory Auto-Sync 2000™", "File transfer complete!")
+                            # print("{} was moved from\n{} to\n{} ".format(i, source, destination))
+            dfiles = os.listdir(destination)
+            final_dest = len(dfiles)
+            messagebox.showinfo("Directory Auto-Sync 2000™", "{} files were moved successfully!".format(final_dest))
 
         # Placement for the Auto-Sync script button
         self.get_btn.grid(row=6, column=0, padx=(83, 0), pady=(30, 0), sticky=NSEW)
