@@ -26,6 +26,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter import filedialog
 from tkinter import messagebox
+from pathlib import Path
 import time
 import shutil
 import os
@@ -117,15 +118,22 @@ class ParentWindow(Frame):
             destination = dpath.get()
             files = os.listdir(source)
             for i in files:
-                print(i)
                 paths = os.path.join(source, i)
+                dpaths = os.path.join(destination, i)
+                file_exists = Path(dpaths)
                 file_birth = os.stat(paths).st_birthtime
                 file_modify = os.stat(paths).st_mtime
                 if (current_milli_time() / 1000) - file_birth < 86400 or (
                     current_milli_time() / 1000
                 ) - file_modify < 86400:
-                    if i != ".DS_Store":
-                        shutil.move(paths, destination)
+                    if i != '.DS_Store':
+                        if file_exists.exists():
+                            shutil.copy(paths, destination)
+                            os.remove(i)
+                            print("{} was moved from\n{} to\n{} ".format(i, source, destination))
+                        else:
+                            shutil.move(paths, destination)
+                            print("{} was moved from\n{} to\n{} ".format(i, source, destination))
             messagebox.askokcancel("Directory Auto-Sync 2000™", "File transfer complete!")
 
         # Placement for the Auto-Sync script button
