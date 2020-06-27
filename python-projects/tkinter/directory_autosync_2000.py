@@ -126,7 +126,7 @@ class ParentWindow(Frame):
                 ) - file_modify < 86400:
                     if i != ".DS_Store":
                         shutil.move(paths, destination)
-            messagebox.askokcancel("Directory Auto-Sync 2000™")
+            messagebox.askokcancel("Directory Auto-Sync 2000™", "File transfer complete!")
 
         # Placement for the Auto-Sync script button
         self.get_btn.grid(row=6, column=0, padx=(83, 0), pady=(30, 0), sticky=NSEW)
