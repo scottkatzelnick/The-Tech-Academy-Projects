@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.db.models import Model
 
 TYPE_CHOICES = {
     ("appetizers", "appetizers"),
@@ -9,7 +9,7 @@ TYPE_CHOICES = {
 }
 
 
-class Products(models.Model):
+class Product(models.Model):
     type = models.CharField(max_length=60, choices=TYPE_CHOICES)
     name = models.CharField(max_length=60, default="", blank=True, null=False)
     description = models.TextField(max_length=300, default="", blank=True)
